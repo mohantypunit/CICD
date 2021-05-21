@@ -6,14 +6,17 @@ pipeline {
     }	
 
 	//Define all variables
-	def app1_name = 'todobackend'
-	def app2_name = 'todoui'
-	def app1_image_tag = "${env.REPOSITORY}/${app1_name}:v${env.BUILD_NUMBER}"
-	def app2_image_tag = "${env.REPOSITORY}/${app2_name}:v${env.BUILD_NUMBER}"
-	def app1_dockerfile_name = 'Dockerfile-todobackend'
-	def app2_dockerfile_name = 'Dockerfile-todoui'
-	def app1_container_name = 'todobackend'
-	def app2_container_name = 'todoui'
+	environment {
+		app1_name = 'todobackend'
+		app2_name = 'todoui'
+		app1_image_tag = "${env.REPOSITORY}/${app1_name}:v${env.BUILD_NUMBER}"
+		app2_image_tag = "${env.REPOSITORY}/${app2_name}:v${env.BUILD_NUMBER}"
+		app1_dockerfile_name = 'Dockerfile-todobackend'
+		app2_dockerfile_name = 'Dockerfile-todoui'
+		app1_container_name = 'todobackend'
+		app2_container_name = 'todoui'
+		}
+	
 	stages {
 		//Stage 1: Checkout Code from Git
 		stage('Application Code Checkout from Git') {
