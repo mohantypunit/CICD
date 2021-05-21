@@ -1,4 +1,4 @@
-node {
+node('jnlp') {
 	//Define all variables
 	def app1_name = 'todobackend'
 	def app2_name = 'todoui'
