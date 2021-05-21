@@ -1,7 +1,7 @@
 pipeline {
 	agent {
         node {
-            label 'jnpl-slave'
+            label 'jnlp-slave'
         }
     }	
 
