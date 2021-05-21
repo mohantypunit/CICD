@@ -9,6 +9,7 @@ node {
 	def app1_container_name = 'todobackend'
 	def app2_container_name = 'todoui'
 	
+	stages{
 	//Stage 1: Checkout Code from Git
 	stage('Application Code Checkout from Git') {
 		checkout scm
@@ -106,7 +107,8 @@ node {
 				sh("kubectl set image deployment/${app2_name} ${app2_container_name}=${app2_image_tag}")
 			}     
 		}
-        }
+	}
+	}
   
 }
 
