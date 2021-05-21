@@ -23,7 +23,7 @@ node {
 			container('maven'){
 				dir ("./${app1_name}") {
 					
-					sh ("mvn test -Dspring.profiles.active=dev")
+					sh 'mvn test -Dspring.profiles.active=dev'
 				} 
 			}
 		}
