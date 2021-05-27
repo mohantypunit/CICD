@@ -1,4 +1,4 @@
-node('jnlp-slave') {
+node('jenkins-agent') {
 	//Define all variables
 	def app1_name = 'todobackend'
 	def app2_name = 'todoui'
